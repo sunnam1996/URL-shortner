@@ -1,0 +1,36 @@
+{% load i18n %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>{% block title %}Shorten URL's{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'common.css' %}" >
+</head>
+
+<body>
+
+    <div id="container">
+        <header><h1></h1></header>
+            <nav id="top">
+                {% block nav %}
+                <ul>
+                    <li><a href="/">{% trans 'Home' %}</a></li><br><br><br><br><br>
+                    <li><a href="/shorturl/">{% trans 'List of URLS' %}</a></li>
+
+                </ul>
+                {% endblock %}
+            </nav>
+
+            <section class="content">
+                {% block content %}{% endblock %}
+            </section>
+
+
+    </div>
+
+
+
+</body>
+</html>
